@@ -1,16 +1,30 @@
-/*****************************************************************************************
-Program: MathTutorV2
-Programmers: Benjamin Dickinson, Ian Mensah
+/*******************************************************************************************
+Program: MathTutorV3
+Programmers: Benjamin Dickinson, Keston Krupicka
 Section 2 - 10:00 AM
-Date: 9/28/2026
-Github Repo: https://github.com/bendickinson15/MathTutorV2.0.git
+Date: 10/17/2026
+Github Repo: https://github.com/bendickinson15/MathTutorV3
 Description: It's a wizard themed math tutor program that displays a greeting, ASCII art,
-and some wizard/magic themed jokes. It generates random numbers and operators to be used
-in one equation that the user can solve. The user's answer is checked for correctness
-and a result is given based on that. The program has a switch that results in an error
-statement for if an operator is chosen that is outside of +, -, *, or /. It also accounts
-for things like negative numbers and fractions in the answer and prevents those.
-******************************************************************************************/
+and some wizard/magic themed jokes.
+
+*It generates two random numbers between 1-10 and then randomly selects operators to be used
+based on third random number, It also accounts for things like negative numbers and fractions
+in the answer and prevents those.
+
+*Uses an inner while loop to validate the user's input for
+
+*Uses an outer while loop to continue until the user wants to quit "Do you want to continue?"
+accepting y, yes, n, no as valid input
+
+*Uses a for loop to give the user 3 attempts to answer the question correctly. After the third
+attempt, display the correct answer.
+
+*After answering 3 correct answers in a row, level up increasing the range by 10
+
+*After answering 3 incorrect answers in a row, level down by the range of 10
+
+*Uses a while loop to validate numeric input
+********************************************************************************************/
 #include <iostream> //required for cout and cin
 #include <cstdlib> //required for random number generators
 #include <string> //required for get line function
@@ -35,7 +49,7 @@ int main() {
 
     //aesthetic header
     cout <<"(*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*]" << endl;
-    cout <<"                       {*} Welcome to the tower of the wizard of magical math tutoring! (V1) {*}" << endl;
+    cout <<"                       {*} Welcome to the tower of the wizard of magical math tutoring! (V3) {*}" << endl;
     cout << R"(
 ,---.    ,---.   ____   ,---------. .---.  .---.    .--.      .--..-./`)  ____..--'   ____    .-------.     ______
 |    \  /    | .'  __ `.\          \|   |  |_ _|    |  |_     |  |\ .-.')|        | .'  __ `. |  _ _   \   |    _ `''.
