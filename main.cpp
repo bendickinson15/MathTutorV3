@@ -39,7 +39,8 @@ int main() {
     int leftNum = 0;
     int rightNum = 0;
     int userAnswer = 0;
-    int mathType = 0;
+    enum MathType {MT_ADD = 1, MT_SUBTRACT = 2, MT_MULTIPLY = 3, MT_DIVIDE = 4};
+    MathType mathType = MT_ADD;
     int correctAnswer = 0;
     int tempNum = 0;
     char mathSymbol = '?';
@@ -78,12 +79,12 @@ int main() {
     //switch for symbol cases
     switch (mathType) {
         //addition case
-        case 1:
+        case MT_ADD:
             mathSymbol = '+';
             correctAnswer = leftNum + rightNum;
             break;
         //subtraction case
-        case 2:
+        case MT_SUBTRACT:
             mathSymbol = '-';
             //if statement to avoid negative result
             if (leftNum < rightNum) {
@@ -94,12 +95,12 @@ int main() {
             correctAnswer = leftNum - rightNum;
             break;
         //multiplication case
-        case 3:
+        case MT_MULTIPLY:
             mathSymbol = '*';
             correctAnswer = leftNum*rightNum;
             break;
         //division case
-        case 4:
+        case MT_DIVIDE:
             mathSymbol = '/';
             //avoids fractions by multiplying by rightNum every time
             correctAnswer = leftNum;
