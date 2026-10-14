@@ -121,26 +121,29 @@ int main() {
 
     //math question and answer
     cout <<"Ah... "<< userName << "! So you have finally found me. If you truly seek the knowledge hidden within these" << endl << "ancient halls, you must first prove your mind is sharp." << endl;
-    cout <<"What is " << leftNum << mathSymbol << rightNum << " = ";
 
-    //loop until user's answer is a valid number
-    while (!(cin >> userAnswer)) {
-        cin.clear(); //clear cin error flag
-        cin.ignore(numeric_limits<streamsize>::max(), '\n'); //ignores max input up to \n
+    do {
+        cout <<"What is " << leftNum << mathSymbol << rightNum << " = ";
 
-        //output asking for a valid number
-        cout <<"\tInvalid wizardry!"<< endl;
-        cout <<"\tEnter a valid spell!" << endl;
-    } //end of loop
+        //loop until user's answer is a valid number
+        while (!(cin >> userAnswer)) {
+            cin.clear(); //clear cin error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); //ignores max input up to \n
 
-    //if statement to check userAnswer for correctness
-    if (userAnswer == correctAnswer) {
-        //correct
-        cout << "Good job! You Got The Question Right!" << endl << endl;
-    } else {
-        //incorrect
-        cout << "I'm So Disappointed In You Apprentice" << endl << endl;
-    }
+            //output asking for a valid number
+            cout <<"\tInvalid wizardry!"<< endl;
+            cout <<"\tEnter a valid spell!" << endl;
+        } //end of loop
+
+        //if statement to check userAnswer for correctness
+        if (userAnswer == correctAnswer) {
+            //correct
+            cout << "Good job! You Got The Question Right!" << endl << endl;
+        } else {
+            //incorrect
+            cout << "I'm So Disappointed In You Apprentice" << endl << endl;
+        }
+    } while (userInput == "yes" || userInput == "y"); // end of do loop
 
     //end program message
     cout <<"This is all for our program! I hope you had a fantastic time!" << endl;
