@@ -150,16 +150,24 @@ int main() {
             //incorrect
             cout << "I'm So Disappointed In You Apprentice" << endl << endl;
         }
-
+    while (true) {
         cout<< "Would you like to continue to expand your knowledge apprentice?" <<endl;
         cin >> userInput;
         for (int i = 0; i < userInput.length(); i++) {
             userInput.at(i) = tolower(userInput.at(i));
         }
+
+        if (userInput == "yes" || userInput == "y" || userInput == "no" || userInput == "n") {
+            break;
+        }else {
+            cout << "Invalid Input" << endl;
+        }
+    }
+
     } while (userInput == "yes" || userInput == "y"); // end of do while loop
 
     //end program message
     cout <<"This is all for our program! I hope you had a fantastic time!" << endl;
-    cout << "The Wizard math V3 Be Out Shortly!" << endl;
+    cout << "The Wizard math V4 Be Out Shortly!" << endl;
     return 0;
 }
