@@ -48,8 +48,8 @@ int main() {
     char mathSymbol = '?';
     const int MAX_ATTEMPTS = 3;
     const int LEVEL_RANGE_CHANGE = 10;
-    int totalCorrect = 0;
-    int totalIncorrect = 0;
+    int numCorrect = 0;
+    int numIncorrect = 0;
     int mathLevel = 1;
     int levelRange = LEVEL_RANGE_CHANGE;
     string userInput = "?";
@@ -132,24 +132,32 @@ int main() {
         }
         cout <<"What is " << leftNum << mathSymbol << rightNum << " = ";
 
-        //loop until user's answer is a valid number
-        while (!(cin >> userAnswer)) {
-            cin.clear(); //clear cin error flag
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); //ignores max input up to \n
+        for (int i = 1; i <= MAX_ATTEMPTS; i++) {
+            //loop until user's answer is a valid number
+            while (!(cin >> userAnswer)) {
+                cin.clear(); //clear cin error flag
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); //ignores max input up to \n
 
-            //output asking for a valid number
-            cout <<"\tInvalid wizardry!"<< endl;
-            cout <<"\tEnter a valid spell!" << endl;
-        } //end of loop
-
-        //if statement to check userAnswer for correctness
-        if (userAnswer == correctAnswer) {
-            //correct
-            cout << "Good job! You Got The Question Right!" << endl << endl;
-        } else {
-            //incorrect
-            cout << "I'm So Disappointed In You Apprentice" << endl << endl;
+                //output asking for a valid number
+                cout <<"\tInvalid wizardry!"<< endl;
+                cout <<"\tEnter a valid spell!" << endl;
+            } //end of loop
+            //if statement to check userAnswer for correctness
+            if (userAnswer == correctAnswer) {
+                //correct
+                cout << "Good job! You Got The Spell Right!" << endl << endl;
+                numCorrect++;
+                break;
+            } else if (i == 3){
+                //incorrect with no attempts left
+                cout << "My apologies young apprentice, but you have failed too many times." << endl << endl;
+            } else {
+                //incorrect with attempts left
+                cout << "Wrong, but you may try again " << MAX_ATTEMPTS-i << " more time(s)."  << endl << endl;
+                numIncorrect++;
+            }
         }
+
     while (true) {
         cout<< "Would you like to continue to expand your knowledge apprentice?" <<endl;
         cin >> userInput;
