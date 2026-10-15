@@ -45,6 +45,13 @@ int main() {
     int correctAnswer = 0;
     int tempNum = 0;
     char mathSymbol = '?';
+    const int MAX_ATTEMPTS = 3;
+    const int LEVEL_RANGE_CHANGE = 10;
+    int totalCorrect = 0;
+    int totalIncorrect = 0;
+    int mathLevel = 1;
+    int levelRange = LEVEL_RANGE_CHANGE;
+    string userInput;
 
     //seeding the random number generators later on
     srand(time(0));
@@ -143,7 +150,7 @@ int main() {
             //incorrect
             cout << "I'm So Disappointed In You Apprentice" << endl << endl;
         }
-    } while (userInput == "yes" || userInput == "y"); // end of do loop
+    } while (userInput == "yes" || userInput == "y"); // end of do while loop
 
     //end program message
     cout <<"This is all for our program! I hope you had a fantastic time!" << endl;
