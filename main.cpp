@@ -30,6 +30,7 @@ attempt, display the correct answer.
 #include <string> //required for get line function
 #include <ctime> //required for seeding random number generators
 #include <limits> //required to use numeric_limits
+#include <cctype> //required for lower casing
 
 using namespace std; //sets standard namespace
 
@@ -51,7 +52,7 @@ int main() {
     int totalIncorrect = 0;
     int mathLevel = 1;
     int levelRange = LEVEL_RANGE_CHANGE;
-    string userInput;
+    string userInput = "?";
 
     //seeding the random number generators later on
     srand(time(0));
@@ -79,49 +80,6 @@ int main() {
         (*) What do you call a snake that is 3.14 feet long? A Pi-thon!)"<< endl << endl;
     cout <<"(*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*]" << endl;
 
-    //setting numbers to random values
-    mathType = rand() % 4 + 1;
-    leftNum = rand() % 10 + 1;
-    rightNum = rand() % 10 + 1;
-
-    //switch for symbol cases
-    switch (mathType) {
-        //addition case
-        case MT_ADD:
-            mathSymbol = '+';
-            correctAnswer = leftNum + rightNum;
-            break;
-        //subtraction case
-        case MT_SUBTRACT:
-            mathSymbol = '-';
-            //if statement to avoid negative result
-            if (leftNum < rightNum) {
-                tempNum = rightNum;
-                rightNum = leftNum;
-                leftNum = tempNum;
-            }
-            correctAnswer = leftNum - rightNum;
-            break;
-        //multiplication case
-        case MT_MULTIPLY:
-            mathSymbol = '*';
-            correctAnswer = leftNum*rightNum;
-            break;
-        //division case
-        case MT_DIVIDE:
-            mathSymbol = '/';
-            //avoids fractions by multiplying by rightNum every time
-            correctAnswer = leftNum;
-            leftNum = rightNum * leftNum;
-            break;
-        //error statements if mathType isn't a number between 1 and 4
-        default:
-            cout<<"Error! Invalid Math Type:"<< mathType << endl;
-            cout << "Program ended with an error -1" << endl;
-            cout << "Please report this error to Debbie Johnson." << endl;
-        return -1;
-    }
-
     //obtaining user's full name
     cout <<"What is your name young apprentice?"<< endl;
     getline(cin, userName);
@@ -130,6 +88,48 @@ int main() {
     cout <<"Ah... "<< userName << "! So you have finally found me. If you truly seek the knowledge hidden within these" << endl << "ancient halls, you must first prove your mind is sharp." << endl;
 
     do {
+        //setting numbers to random values
+        mathType = static_cast<MathType>(rand() % 4 + 1);
+        leftNum = rand() % 10 + 1;
+        rightNum = rand() % 10 + 1;
+
+        //switch for symbol cases
+        switch (mathType) {
+            //addition case
+            case MT_ADD:
+                mathSymbol = '+';
+                correctAnswer = leftNum + rightNum;
+                break;
+                //subtraction case
+            case MT_SUBTRACT:
+                mathSymbol = '-';
+                //if statement to avoid negative result
+                if (leftNum < rightNum) {
+                    tempNum = rightNum;
+                    rightNum = leftNum;
+                    leftNum = tempNum;
+                }
+                correctAnswer = leftNum - rightNum;
+                break;
+                //multiplication case
+            case MT_MULTIPLY:
+                mathSymbol = '*';
+                correctAnswer = leftNum*rightNum;
+                break;
+                //division case
+            case MT_DIVIDE:
+                mathSymbol = '/';
+                //avoids fractions by multiplying by rightNum every time
+                correctAnswer = leftNum;
+                leftNum = rightNum * leftNum;
+                break;
+                //error statements if mathType isn't a number between 1 and 4
+            default:
+                cout<<"Error! Invalid Math Type:"<< mathType << endl;
+                cout << "Program ended with an error -1" << endl;
+                cout << "Please report this error to Debbie Johnson." << endl;
+                return -1;
+        }
         cout <<"What is " << leftNum << mathSymbol << rightNum << " = ";
 
         //loop until user's answer is a valid number
@@ -149,6 +149,12 @@ int main() {
         } else {
             //incorrect
             cout << "I'm So Disappointed In You Apprentice" << endl << endl;
+        }
+
+        cout<< "Would you like to continue to expand your knowledge apprentice?" <<endl;
+        cin >> userInput;
+        for (int i = 0; i < userInput.length(); i++) {
+            userInput.at(i) = tolower(userInput.at(i));
         }
     } while (userInput == "yes" || userInput == "y"); // end of do while loop
 
