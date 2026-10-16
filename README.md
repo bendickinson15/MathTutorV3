@@ -3,7 +3,7 @@
 - [Maintainers](#maintainers)
 - [New Concepts Used](#new-concepts-used)
 - [Console Output Example](#console-output-example)
-  - [Leveling Up](#console-output-leveling-up-example:)
+  - [Leveling Up](#console-output-leveling-up-example)
 
 ## Summary
 This is a math tutoring program themed around wizards/magic.
