@@ -35,7 +35,7 @@ This is a math tutoring program themed around wizards/magic.
 
 
 ## Console Output Leveling Down Example:
-![Leveling Down](./levelingdown.png)
+![Leveling Down](./assests/levelingdown.png)
 
 ## Console Output Invalid Numeric Input Example:
 ![Invalid Numeric Input](./assests/invalidInput.png)
