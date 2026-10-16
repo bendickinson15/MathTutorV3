@@ -90,8 +90,8 @@ int main() {
     do {
         //setting numbers to random values
         mathType = static_cast<MathType>(rand() % 4 + 1);
-        leftNum = rand() % 10 + 1;
-        rightNum = rand() % 10 + 1;
+        leftNum = rand() % levelRange+ 1;
+        rightNum = rand() % levelRange+ 1;
 
         //switch for symbol cases
         switch (mathType) {
@@ -158,19 +158,27 @@ int main() {
             }
         }
 
+        if (numCorrect == 3) {
+            mathLevel += 1;
+            numIncorrect = 0;
+            numCorrect = 0;
+            levelRange += LEVEL_RANGE_CHANGE;
+            cout << "Congrats! Your on Level " << mathLevel << ". Your new range is " << levelRange << endl;
+        } // end of if loop
+
     while (true) {
         cout<< "Would you like to continue to expand your knowledge apprentice?" <<endl;
         cin >> userInput;
         for (int i = 0; i < userInput.length(); i++) {
             userInput.at(i) = tolower(userInput.at(i));
-        }
+        } // end of while true statement
 
         if (userInput == "yes" || userInput == "y" || userInput == "no" || userInput == "n") {
             break;
         }else {
             cout << "Invalid Input" << endl;
-        }
-    }
+        } // end of else statement
+    } // end of while loop
 
     } while (userInput == "yes" || userInput == "y"); // end of do while loop
 
