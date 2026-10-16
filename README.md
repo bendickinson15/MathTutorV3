@@ -3,6 +3,7 @@
 - [Maintainers](#maintainers)
 - [New Concepts Used](#new-concepts-used)
 - [Console Output Example](#console-output-example)
+  - [Leveling Up](#console-output-leveling-up-example:)
 
 ## Summary
 This is a math tutoring program themed around wizards/magic.
@@ -27,12 +28,11 @@ This is a math tutoring program themed around wizards/magic.
 - Do-while, while, and for loop iteration
 - Converting strings to lowercase
 - Constant variables
-- 
+
 
 ## Console Output Leveling Up Example:
-```
 ![Leveling Up](./assests/levelingUp.png)
-```
+
 
 ## Console Output Error Example:
 ```
