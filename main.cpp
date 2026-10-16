@@ -37,22 +37,22 @@ using namespace std; //sets standard namespace
 //start of the main function
 int main() {
     //initializing variables
+    enum MathType {MT_ADD = 1, MT_SUBTRACT = 2, MT_MULTIPLY = 3, MT_DIVIDE = 4};
+    MathType mathType = MT_ADD;
+    char mathSymbol = '?';
     string userName = "unknown";
+    string userInput = "?";
+    const int MAX_ATTEMPTS = 3;
+    const int LEVEL_RANGE_CHANGE = 10;
     int leftNum = 0;
     int rightNum = 0;
     int userAnswer = 0;
-    enum MathType {MT_ADD = 1, MT_SUBTRACT = 2, MT_MULTIPLY = 3, MT_DIVIDE = 4};
-    MathType mathType = MT_ADD;
     int correctAnswer = 0;
     int tempNum = 0;
-    char mathSymbol = '?';
-    const int MAX_ATTEMPTS = 3;
-    const int LEVEL_RANGE_CHANGE = 10;
     int numCorrect = 0;
     int numIncorrect = 0;
     int mathLevel = 1;
     int levelRange = LEVEL_RANGE_CHANGE;
-    string userInput = "?";
 
     //seeding the random number generators later on
     srand(time(0));
@@ -163,8 +163,15 @@ int main() {
             numIncorrect = 0;
             numCorrect = 0;
             levelRange += LEVEL_RANGE_CHANGE;
-            cout << "Congrats! Your on Level " << mathLevel << ". Your new range is " << levelRange << endl;
-        } // end of if loop
+            cout << "Congrats! Your on Level " << mathLevel << ". Your new range is 1-" << levelRange << endl;
+        } else if (numIncorrect == 3 && mathLevel > 1) {
+            mathLevel -= 1;
+            numIncorrect = 0;
+            numCorrect = 0;
+            levelRange -= LEVEL_RANGE_CHANGE;
+            cout << "Sorry! You got too many incorrect. Your new level is " << mathLevel << ", and your new range is 1-" << levelRange << endl;
+        }
+            // end of if statement
 
     while (true) {
         cout<< "Would you like to continue to expand your knowledge apprentice?" <<endl;
