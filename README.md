@@ -3,7 +3,7 @@
 - [Maintainers](#maintainers)
 - [New Concepts Used](#new-concepts-used)
 - [Console Output Example](#console-output-example)
-  - [Leveling Up](#console-output-leveling-up-example)
+
 
 ## Summary
 This is a math tutoring program themed around wizards/magic.
@@ -34,10 +34,13 @@ This is a math tutoring program themed around wizards/magic.
 ![Leveling Up](./assests/levelingUp.png)
 
 
-## Console Output Error Example:
-```
+## Console Output Leveling Down Example:
+![Leveling Down] (./)
 
-```
+## Console Output Invalid Numeric Input Example:
+![Invalid Numeric Input](./assests/invalidinput.png)
 
+## Console Output Invalid Yes or No Input Example:
+![Invalid Yes or No Input](./assests/invalidYNInput.png)
 
 [Back to Top](#math-tutor-v1)
