@@ -31,7 +31,7 @@ This is a math tutoring program themed around wizards/magic.
 
 ## Console Output Leveling Up Example:
 ```
-![Leveling Up](assests/levelingUp.png)
+![Leveling Up](./assests/levelingUp.png)
 ```
 
 ## Console Output Error Example:
