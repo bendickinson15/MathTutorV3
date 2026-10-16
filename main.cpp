@@ -87,6 +87,7 @@ int main() {
     //math question and answer
     cout <<"Ah... "<< userName << "! So you have finally found me. If you truly seek the knowledge hidden within these" << endl << "ancient halls, you must first prove your mind is sharp." << endl;
 
+    //start of do-while loop for doing any amount of questions the user wants
     do {
         //setting numbers to random values
         mathType = static_cast<MathType>(rand() % 4 + 1);
@@ -130,6 +131,8 @@ int main() {
                 cout << "Please report this error to Debbie Johnson." << endl;
                 return -1;
         }
+
+        //asks the math problem
         cout <<"What is " << leftNum << mathSymbol << rightNum << " = ";
 
         for (int i = 1; i <= MAX_ATTEMPTS; i++) {
@@ -142,6 +145,7 @@ int main() {
                 cout <<"\tInvalid wizardry!"<< endl;
                 cout <<"\tEnter a valid spell!" << endl;
             } //end of loop
+
             //if statement to check userAnswer for correctness
             if (userAnswer == correctAnswer) {
                 //correct
@@ -158,36 +162,41 @@ int main() {
             }
         }
 
+        //if statement for leveling up with number of problems correct/incorrect
         if (numCorrect == 3) {
+            //3 correct means leveling up
             mathLevel += 1;
             numIncorrect = 0;
             numCorrect = 0;
             levelRange += LEVEL_RANGE_CHANGE;
             cout << "Congrats! Your on Level " << mathLevel << ". Your new range is 1-" << levelRange << endl;
         } else if (numIncorrect == 3 && mathLevel > 1) {
+            //3 incorrect and past level 1 means leveling down
             mathLevel -= 1;
             numIncorrect = 0;
             numCorrect = 0;
             levelRange -= LEVEL_RANGE_CHANGE;
             cout << "Sorry! You got too many incorrect. Your new level is " << mathLevel << ", and your new range is 1-" << levelRange << endl;
         }
-            // end of if statement
 
+        //loop to check multiple conditions
     while (true) {
+        //asks if user wants to continue
         cout<< "Would you like to continue to expand your knowledge apprentice?" <<endl;
         cin >> userInput;
+        //loop to convert input into lowercase
         for (int i = 0; i < userInput.length(); i++) {
             userInput.at(i) = tolower(userInput.at(i));
-        } // end of while true statement
-
+        }
+        //checks if user's input is valid
         if (userInput == "yes" || userInput == "y" || userInput == "no" || userInput == "n") {
             break;
-        }else {
-            cout << "Invalid Input" << endl;
-        } // end of else statement
-    } // end of while loop
+        }
+        cout << "Invalid Input" << endl;
 
-    } while (userInput == "yes" || userInput == "y"); // end of do while loop
+    }
+
+    } while (userInput == "yes" || userInput == "y"); // loopback if answer is yes, ends program if not
 
     //end program message
     cout <<"This is all for our program! I hope you had a fantastic time!" << endl;
