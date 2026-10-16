@@ -152,13 +152,15 @@ int main() {
                 cout << "Good job! You Got The Spell Right!" << endl << endl;
                 numCorrect++;
                 break;
-            } else if (i == 3){
-                //incorrect with no attempts left
-                cout << "My apologies young apprentice, but you have failed too many times." << endl << endl;
             } else {
-                //incorrect with attempts left
-                cout << "Wrong, but you may try again " << MAX_ATTEMPTS-i << " more time(s)."  << endl << endl;
-                numIncorrect++;
+                if (i == 3){
+                    //incorrect with no attempts left
+                    cout << "My apologies young apprentice, but you have failed too many times." << endl << endl;
+                    numIncorrect++;
+                } else {
+                    //incorrect with attempts left
+                    cout << "Wrong, but you may try again " << MAX_ATTEMPTS-i << " more time(s)."  << endl << endl;
+                }
             }
         }
 
