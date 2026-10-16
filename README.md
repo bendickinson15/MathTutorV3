@@ -27,65 +27,9 @@ This is a math tutoring program themed around wizards/magic.
 - Do-while, while, and for loop iteration
 - Converting strings to lowercase
 - Constant variables
-- 
 
-## Console Output Full Correct Example:
-```
-(*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*]
-
-                       {*} Welcome to the tower of the wizard of magical math tutoring! (V1) {*}
-
-,---.    ,---.   ____   ,---------. .---.  .---.    .--.      .--..-./`)  ____..--'   ____    .-------.     ______
-|    \  /    | .'  __ `.\          \|   |  |_ _|    |  |_     |  |\ .-.')|        | .'  __ `. |  _ _   \   |    _ `''.
-|  ,  \/  ,  |/   '  \  \`--.  ,---'|   |  ( ' )    | _( )_   |  |/ `-' \|   .-'  '/   '  \  \| ( ' )  |   | _ | ) _  \
-|  |\_   /|  ||___|  /  |   |   \   |   '-(_{;}_)   |(_ o _)  |  | `-'`"`|.-'.'   /|___|  /  ||(_ o _) /   |( ''_'  ) |
-|  _( )_/ |  |   _.-`   |   :_ _:   |      (_,_)    | (_,_) \ |  | .---.    /   _/    _.-`   || (_,_).' __ | . (_) `. |
-| (_ o _) |  |.'   _    |   (_I_)   | _ _--.   |    |  |/    \|  | |   |  .'._( )_ .'   _    ||  |\ \  |  ||(_    ._) '
-|  (_,_)  |  ||  _( )_  |  (_(=)_)  |( ' ) |   |    |  '  /\  `  | |   |.'  (_'o._)|  _( )_  ||  | \ `'   /|  (_.\.' /
-|  |      |  |\ (_ o _) /   (_I_)   (_{;}_)|   |    |    /  \    | |   ||    (_,_)|\ (_ o _) /|  |  \    / |       .'
-'--'      '--' '.(_,_).'    '---'   '(_,_) '---'    `---'    `---` '---'|_________| '.(_,_).' ''-'   `'-'  '-----'`
-
-
-
-(*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*]
-
-A wise wizards words:
-        (*) What's a wizard's favorite school subject? spell-gebra!
-        (*) Why did the sorcerer break his calculator? He wanted to do math-a-magics in his head!
-        (*) What is a witch's favorite shape? A Hex-agon!
-        (*) What do you call a snake that is 3.14 feet long? A Pi-thon!
-
-(*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*]
-
-What is your name young apprentice?
-Ben Dickinson
-
-Ah... Ben Dickinson! So you have finally found me. If you truly seek the knowledge hidden within these ancient halls, you must
-first prove your mind is sharp.
-What is 5*9 =45
-
-Good job! You Got The Question Right!
-
-This is all for our program! I hope you had a fantastic time!
-The Wizard math V3 Be Out Shortly!
+## Console Output Leveling Up Example:
 ```
 
-## Console Output Incorrect Example:
 ```
-What is 9*7 =4
-
-I'm So Disappointed In You Apprentice
-
-This is all for our program! I hope you had a fantastic time!
-The Wizard math V3 Be Out Shortly!
-```
-
-## Console Output Error Example:
-```
-Error! Invalid Math Type:7
-Program ended with an error -1
-Please report this error to Debbie Johnson.
-```
-
-
 [Back to Top](#math-tutor-v1)
