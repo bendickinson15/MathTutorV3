@@ -2,7 +2,11 @@
 - [Summary](#summary)
 - [Maintainers](#maintainers)
 - [New Concepts Used](#new-concepts-used)
-- [Console Output Example](#console-output-example)
+  - [Leveling Up Example](#leveling-up-example)
+  - [Leveling Down Example](#leveling-down-example)
+  - [Invalid Numeric Input Example](#invalid-numeric-input-example)
+  - [Invalid Yes or No Input Example](#invalid-yes-or-no-input-example)
+
 
 
 ## Summary
@@ -30,17 +34,17 @@ This is a math tutoring program themed around wizards/magic.
 - Constant variables
 
 
-## Console Output Leveling Up Example:
+## Leveling Up Example
 ![Leveling Up](./assests/levelingUp.png)
 
 
-## Console Output Leveling Down Example:
+## Leveling Down Example
 ![Leveling Down](./assests/levelingdown.png)
 
-## Console Output Invalid Numeric Input Example:
+## Invalid Numeric Input Example
 ![Invalid Numeric Input](./assests/invalidInput.png)
 
-## Console Output Invalid Yes or No Input Example:
+## Invalid Yes or No Input Example
 ![Invalid Yes or No Input](./assests/invalidYNInput.png)
 
 [Back to Top](#math-tutor-v1)
